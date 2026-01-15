@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Input Types Explorer</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <h1><i class="fas fa-code"></i> HTML Input Types</h1>
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <p>A comprehensive guide to every HTML5 input type with live
+                    previews and code snippets.</p>
+
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="input-search"
+                        placeholder="Search input types (e.g. 'date', 'range')...">
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="input-group">
+                <h2 class="section-title">Standard Text Inputs</h2>
+                <div class="grid" id="input-grid">
+                    <article class="card" data-title="text">
+                        <div class="card-header">
+                            <code>type="text"</code>
+                            <span class="badge">Standard</span>
+                        </div>
+                        <p class="description">The default input type. Used for
+                            single-line text fields.</p>
+                        <div class="preview">
+                            <label for="ex-text">Full Name</label>
+                            <input type="text" id="ex-text"
+                                placeholder="John Doe" class="demo-input">
+                            <div class="value-display">Value: <span
+                                    class="val"></span></div>
+                        </div>
+                        <div class="code-box">
+                            <pre><code>&lt;input type="text"&gt;</code></pre>
+                            <button class="copy-btn"><i
+                                    class="far fa-copy"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="card" data-title="password">
+                        <div class="card-header">
+                            <code>type="password"</code>
+                            <span class="badge">Security</span>
+                        </div>
+                        <p class="description">Characters are masked (dots or
+                            asterisks) for privacy.</p>
+                        <div class="preview">
+                            <label for="ex-pass">Password</label>
+                            <input type="password" id="ex-pass"
+                                placeholder="••••••••" class="demo-input">
+                            <div class="value-display">Value: <span
+                                    class="val"></span></div>
+                        </div>
+                        <div class="code-box">
+                            <pre><code>&lt;input type="password"&gt;</code></pre>
+                            <button class="copy-btn"><i
+                                    class="far fa-copy"></i></button>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="full-form-section">
+                <div class="form-wrapper">
+                    <div class="form-header">
+                        <h2><i class="fas fa-paper-plane"></i> Interactive Form
+                            Demo</h2>
+                        <p>Experience how different inputs work together in a
+                            real-world scenario.</p>
+                    </div>
+
+                    <div class="form-container">
+                        <form id="master-form">
+                            <div class="form-grid">
+                                <div class="form-control">
+                                    <label for="f-name">Full Name</label>
+                                    <input type="text" id="f-name" required
+                                        placeholder="Jane Doe">
+                                </div>
+                                <div class="form-control">
+                                    <label for="f-email">Email Address</label>
+                                    <input type="email" id="f-email" required
+                                        placeholder="jane@example.com">
+                                </div>
+                                <div class="form-control">
+                                    <label for="f-date">Birth Date</label>
+                                    <input type="date" id="f-date">
+                                </div>
+                                <div class="form-control">
+                                    <label for="f-range">Expertise Level</label>
+                                    <div class="range-wrapper">
+                                        <input type="range" id="f-range" min="0"
+                                            max="100">
+                                    </div>
+                                </div>
+                                <div class="form-control full-width">
+                                    <label for="f-color">Preferred Brand
+                                        Theme</label>
+                                    <input type="color" id="f-color">
+                                </div>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>Send Application</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Educational Tech | Built for Developers</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
